@@ -1,0 +1,11 @@
+<svg width="780" height="940" viewBox="0 0 780 940" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="780" height="940" rx="48" fill="#E9EEF1"/>
+  <rect x="38" y="38" width="704" height="864" rx="36" fill="#F8F6F0" stroke="#D6E1E8" stroke-width="2"/>
+  <circle cx="390" cy="304" r="142" fill="#D8D2C8"/>
+  <path d="M243 714C243 593.602 340.602 496 461 496H319C439.398 496 537 593.602 537 714V738H243V714Z" fill="#16314A"/>
+  <path d="M289 291C289 235.772 333.772 191 389 191H391C446.228 191 491 235.772 491 291V386C491 441.228 446.228 486 391 486H389C333.772 486 289 441.228 289 386V291Z" fill="#F3DCC7"/>
+  <path d="M300 268C300 211.114 346.114 165 403 165H408C464.886 165 511 211.114 511 268V316H300V268Z" fill="#173A5B"/>
+  <path d="M307 340C335.667 333.333 364.333 330 393 330C421.667 330 450.333 333.333 479 340" stroke="#C9976F" stroke-width="8" stroke-linecap="round"/>
+  <path d="M283 757H497" stroke="#D6E1E8" stroke-width="2"/>
+  <text x="390" y="820" text-anchor="middle" fill="#173A5B" font-family="Arial, sans-serif" font-size="28" letter-spacing="4">HEADSHOT PLACEHOLDER</text>
+</svg>
