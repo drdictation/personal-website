@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { FaqList } from "@/components/faq-list";
+import { FaqStructuredData } from "@/components/faq-structured-data";
 import { PageHero } from "@/components/page-hero";
 import { patientsContent } from "@/lib/site-content";
 import { buildMetadata } from "@/lib/metadata";
@@ -14,6 +15,7 @@ export const metadata: Metadata = buildMetadata(
 export default function ForPatientsPage() {
   return (
     <>
+      <FaqStructuredData faqs={patientsContent.faqs} />
       <PageHero {...patientsContent.hero} />
       <section className="shell section">
         <div className="editorial-grid">

@@ -1,0 +1,55 @@
+# Associate Professor Chamara Basnayake - Specialist Gastroenterologist & Endoscopist
+
+> Academic gastroenterologist and endoscopist based in Melbourne, Australia. Specialist clinical care spanning disorders of gut-brain interaction (DGBI), oesophageal motility disorders, eosinophilic oesophagitis (EoE), inflammatory bowel disease (IBD), coeliac disease, bowel cancer screening, and endoscopy.
+
+## Clinical Overview & Qualifications
+- **Name:** Associate Professor Chamara Basnayake
+- **Title:** Consultant Gastroenterologist, Endoscopist, Associate Professor (University of Melbourne)
+- **Qualifications:** MBBS (Hons) (Monash University), FRACP (Fellow of the Royal Australasian College of Physicians), PhD (University of Melbourne)
+- **Subspecialty Training:** Advanced Fellowship in Oesophageal Motility Disorders at KU Leuven, Belgium
+- **Key Appointments & Leadership:**
+  - Clinical Lead, Oesophageal Physiology Laboratory at St Vincent's Hospital Melbourne
+  - Co-founder, Multidisciplinary Functional Gut Disorders Clinic at St Vincent's Hospital Melbourne
+  - PhD Committee Chair, Department of Surgery, University of Melbourne
+  - Principal Investigator for clinical trials in Eosinophilic Oesophagitis (EoE) and Coeliac Disease
+  - Recipient of the 2021 Ray Clouse Award (The Rome Foundation) and 2022 TJ Martin Award (St Vincent's Hospital)
+  - Committee Member, Gastroenterological Society of Australia (GESA) Luminal Committee
+
+## Areas of Clinical Practice
+- **Disorders of Gut-Brain Interaction (DGBI):** Irritable bowel syndrome (IBS), functional dyspepsia, chronic bloating, abdominal pain, and multidisciplinary treatment models.
+- **Oesophageal Disorders & Motility:** High-resolution oesophageal manometry, gastro-oesophageal reflux disease (GORD / GERD), dysphagia (swallowing difficulties), and achalasia.
+- **Eosinophilic Oesophagitis (EoE):** Diagnostic assessment, dietary therapies, pharmacological treatment, and clinical trial participation.
+- **Inflammatory Bowel Disease (IBD):** Crohn's disease and ulcerative colitis management, multidisciplinary care, therapeutic monitoring, and microbiota-based therapies.
+- **Coeliac Disease:** Serological and biopsy-based diagnosis, symptom evaluation, refractory cases, and trial options.
+- **Endoscopic Procedures:** Diagnostic and therapeutic gastroscopy, colonoscopy, bowel cancer screening, and polyp surveillance.
+- **Iron Deficiency & Anaemia:** Systematic clinical and endoscopic investigation of occult gastrointestinal blood loss.
+
+## Consulting & Procedure Locations
+- **Private Consulting Rooms:** Focus Gastroenterology, Suite 201, Level 2, 100 Victoria Parade, East Melbourne VIC 3002, Australia
+  - Telephone: (03) 9650 7917
+  - Fax: (03) 9650 7910
+  - Email: office@focusgastro.com.au
+- **Procedural Hospital Locations:**
+  - St Vincent's Private Hospital (Fitzroy, Melbourne)
+  - Epworth Freemasons (East Melbourne)
+  - Hobsons Bay Day Procedure Centre (Altona North, Melbourne)
+- **Public Hospital & University Appointments:**
+  - Consultant Gastroenterologist, St Vincent's Hospital Melbourne
+  - Associate Professor, Department of Surgery, University of Melbourne
+
+## Referral Pathways for Medical Practitioners
+- A valid GP or medical specialist referral is required for private consultation and Medicare rebates.
+- **Direct / Open-Access Endoscopy:** Available for straightforward diagnostic gastroscopy and colonoscopy indications (positive FOBT, surveillance, iron deficiency).
+- **Referral Submission:** Fax to (03) 9650 7910 or email to office@focusgastro.com.au.
+
+## Key Web Pages & Resources
+- [About Associate Professor Basnayake](/about): Detailed background, qualifications, research, and leadership credentials.
+- [Conditions & Symptoms](/conditions): Clinical information on digestive symptoms, motility disorders, IBD, and EoE.
+- [Procedures](/procedures): Information on gastroscopy, colonoscopy, open-access endoscopy, and procedure locations.
+- [For Referrers](/for-referrers): Direct referral pathways, procedural triage, and communication protocols.
+- [For Patients](/for-patients): Appointment preparation, what to bring, and patient FAQs.
+- [Research & Publications](/research): Information on academic studies (including the MANTRA trial in Lancet Gastroenterology & Hepatology), clinical trials, and media.
+- [Contact](/contact): Practice contact details, consulting suites, transport, and map.
+- [Google Scholar Profile](https://scholar.google.com/citations?user=0sERojoAAAAJ&hl=en&oi=ao): Comprehensive list of peer-reviewed publications.
+- [University of Melbourne Profile](https://findanexpert.unimelb.edu.au/profile/866034-chamara-basnayake): Academic and faculty appointments.
+- [Full LLM Knowledge Base](/llms-full.txt): Complete site text in markdown format.

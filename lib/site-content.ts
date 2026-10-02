@@ -9,7 +9,11 @@ export const siteConfig = {
   qualifications: "MBBS (Hons), FRACP, PhD",
   shortName: "Assoc Prof Chamara Basnayake",
   location: "Melbourne, Victoria",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
+  siteUrl:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "https://chamarabasnayake.com.au"),
   description:
     "Specialist gastroenterology care in Melbourne spanning digestive symptoms, bowel cancer screening, iron deficiency, reflux, inflammatory bowel disease, coeliac disease, eosinophilic oesophagitis, and oesophageal disorders.",
   googleScholar:
