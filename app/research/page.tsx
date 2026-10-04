@@ -14,27 +14,9 @@ export const metadata: Metadata = buildMetadata(
 );
 
 export default function ResearchPage() {
-  const baseUrl = siteConfig.siteUrl.replace(/\/+$/, "");
-
-  const pageSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "@id": `${baseUrl}/research#webpage`,
-    url: `${baseUrl}/research`,
-    name: "Gastroenterology Research, Clinical Trials and Academic Output",
-    description: "Clinical research portfolio, pharmaceutical clinical trials, and publications for Associate Professor Chamara Basnayake.",
-    author: {
-      "@id": `${baseUrl}/#physician`
-    }
-  };
-
   return (
     <>
       <BreadcrumbStructuredData items={[{ name: "Research", item: "/research" }]} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
       <PageHero {...researchContent.hero} />
       <section className="shell section">
         <div className="editorial-grid">

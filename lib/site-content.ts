@@ -183,101 +183,86 @@ export const aboutContent = {
 
 export const conditionsContent = {
   hero: {
-    eyebrow: "Conditions & Subspecialties",
+    eyebrow: "Conditions & Areas of Assessment",
     title: "Gastrointestinal Conditions & Symptoms",
     intro:
-      "Associate Professor Chamara Basnayake provides specialist assessment and evidence-based management for general gastroenterological symptoms as well as tertiary subspecialty disorders. Consultations focus on structured diagnostic assessment, targeted investigation, and personalised multidisciplinary care."
+      "Associate Professor Chamara Basnayake provides specialist assessment for patients with general gastroenterological symptoms as well as focused subspecialty conditions. Consultations focus on careful clinical evaluation, targeted investigation, and collaborative care with general practice."
   },
   subspecialties: [
     {
       title: "Disorders of Gut-Brain Interaction & Irritable Bowel Syndrome (IBS)",
       description:
-        "Chronic abdominal pain, altered bowel habits (diarrhoea or constipation), bloating, and functional dyspepsia. Dr Basnayake led the landmark MANTRA randomised controlled trial (Lancet Gastroenterology & Hepatology) and co-founded the Multidisciplinary Functional Gut Clinic at St Vincent's Hospital Melbourne, championing integrated medical, dietary, and gut-directed behavioural therapies.",
-      keyAreas: ["Irritable Bowel Syndrome (IBS)", "Functional Dyspepsia", "Chronic Bloating & Distension", "Constipation & Diarrhoea"]
+        "Assessment of persistent abdominal pain, altered bowel habits (diarrhoea or constipation), and chronic bloating. Assessment focuses on clarifying symptom patterns, identifying contributing factors, and developing structured, evidence-based management plans."
     },
     {
-      title: "Oesophageal Motility Disorders, Reflux & Dysphagia",
+      title: "Oesophageal Disorders, Reflux & Dysphagia",
       description:
-        "Investigation of persistent gastro-oesophageal reflux disease (GORD / GERD), difficulty swallowing (dysphagia), non-cardiac chest pain, and motility conditions including achalasia and oesophageal spasm. Diagnostic workup integrates gastroscopy with high-resolution oesophageal manometry.",
-      keyAreas: ["GORD / Refractory Reflux", "Dysphagia (Difficulty Swallowing)", "Achalasia & Motility Disorders", "High-Resolution Manometry"]
+        "Evaluation of persistent heartburn, acid regurgitation, non-cardiac chest discomfort, and difficulty swallowing (dysphagia). Clinical assessment helps distinguish between reflux disease, structural problems, and oesophageal motility disorders."
     },
     {
       title: "Eosinophilic Oesophagitis (EoE)",
       description:
-        "Specialist diagnosis, structured endoscopic mucosal biopsy protocols, and ongoing management of EoE in adolescents and adults. Management encompasses dietary elimination therapy, swallowed topical corticosteroids, and eligibility assessment for clinical trials where Dr Basnayake acts as Principal Investigator.",
-      keyAreas: ["EoE Diagnosis & Biopsy", "Dietary Elimination Therapy", "Medical Therapy", "Clinical Trial Pathways"]
+        "Specialist assessment and ongoing follow-up for adolescents and adults presenting with swallowing difficulties, food bolus obstruction, or confirmed eosinophilic oesophagitis, including endoscopic assessment with mucosal biopsies."
     },
     {
       title: "Coeliac Disease",
       description:
-        "Accurate serological and endoscopic confirmation of coeliac disease, structured nutritional monitoring, and evaluation of non-responsive or refractory coeliac symptoms. Dr Basnayake serves as Principal Investigator on international coeliac clinical trials.",
-      keyAreas: ["Biopsy Confirmation", "Refractory Coeliac Disease", "Nutritional Follow-up", "Clinical Trials"]
+        "Diagnostic clarification, endoscopic biopsy confirmation, and clinical review for patients with suspected coeliac disease or ongoing digestive symptoms following diagnosis."
     },
     {
       title: "Inflammatory Bowel Disease (IBD)",
       description:
-        "Comprehensive diagnostic assessment, endoscopic monitoring, and long-term medical management of Crohn's disease and ulcerative colitis. Focus areas include multidisciplinary decision-making, biologic and advanced small-molecule therapies, and research into microbiota-based treatments.",
-      keyAreas: ["Crohn's Disease", "Ulcerative Colitis", "Biologic Therapies", "Endoscopic Surveillance"]
+        "Diagnostic evaluation, endoscopic surveillance, and medical management for Crohn's disease and ulcerative colitis, coordinated in partnership with general practitioners."
     },
     {
       title: "Bowel Cancer Screening & Colorectal Polyp Surveillance",
       description:
-        "Comprehensive evaluation and high-quality colonoscopy following positive National Bowel Cancer Screening Program (NBCSP) faecal occult blood tests (FOBT), strong family history of colorectal cancer, or scheduled surveillance following previous adenomatous polyps.",
-      keyAreas: ["Positive FOBT Investigation", "Screening Colonoscopy", "Polypectomy", "Family History Risk Assessment"]
-    },
-    {
-      title: "Iron Deficiency & Gastrointestinal Blood Loss",
-      description:
-        "Structured endoscopic investigation (gastroscopy and colonoscopy) to detect occult bleeding sources, malabsorption, coeliac disease, or vascular lesions in patients with unexplained iron deficiency anaemia.",
-      keyAreas: ["Iron Deficiency Anaemia", "Occult GI Bleeding", "Dual Endoscopic Assessment", "Cause Identification"]
+        "Specialist consultation and colonoscopy following a positive National Bowel Cancer Screening Program (FOBT) result, a personal or family history of colorectal cancer, or for scheduled surveillance after previous polyps."
     }
   ],
   symptomGroups: [
     {
       title: "Common Digestive Symptoms Assessed",
       body:
-        "Symptoms such as bleeding, altered bowel habit, persistent reflux, difficulty swallowing, chronic abdominal pain, or unexplained weight loss require structured clinical assessment to identify underlying causes and tailor therapy.",
+        "A structured consultation can help clarify symptoms that are persistent, unexplained, or causing concern:",
       items: [
-        "Abdominal pain and discomfort",
-        "Altered bowel habit (diarrhoea, constipation, alternating)",
-        "Persistent heartburn, acid regurgitation and reflux",
-        "Swallowing difficulties (dysphagia) or food bolus obstruction",
-        "Rectal bleeding or positive faecal occult blood test",
-        "Persistent bloating and abdominal distension",
-        "Unexplained iron deficiency anaemia or weight loss"
+        "Abdominal pain or discomfort",
+        "Change in bowel habit (diarrhoea, constipation, or alternating)",
+        "Persistent reflux, heartburn, or regurgitation",
+        "Difficulty swallowing (dysphagia) or food sticking",
+        "Rectal bleeding or positive bowel cancer screening test (FOBT)",
+        "Persistent bloating or abdominal distension",
+        "Unexplained iron deficiency or weight loss"
       ]
     }
   ],
   note:
-    "Where appropriate, clinical assessment may include diagnostic endoscopy (gastroscopy/colonoscopy), high-resolution oesophageal manometry, specialised pathology review, imaging, or a staged multidisciplinary plan coordinated with referring general practitioners."
+    "Where indicated, assessment may include diagnostic gastroscopy, colonoscopy, or specialized investigations arranged in communication with your referring doctor."
 };
 
 export const proceduresContent = {
   hero: {
-    eyebrow: "Procedures & Diagnostics",
-    title: "Endoscopy and Diagnostic Procedures",
+    eyebrow: "Procedures",
+    title: "Endoscopy and Procedures",
     intro:
-      "Associate Professor Basnayake performs diagnostic and therapeutic endoscopy across major private hospital facilities in Melbourne. High-quality procedural care is paired with clear clinical communication and prompt reporting."
+      "Associate Professor Basnayake performs diagnostic and therapeutic endoscopy at accredited private hospital facilities in Melbourne, with an emphasis on appropriate indication, patient safety, and clear communication."
   },
   procedures: [
     {
       title: "Gastroscopy (Upper GI Endoscopy)",
       body:
-        "Gastroscopy allows detailed visual examination and biopsy of the oesophagus, stomach, and duodenum. It is indicated for evaluating persistent reflux, swallowing difficulties (dysphagia), suspected coeliac disease, eosinophilic oesophagitis (EoE), upper abdominal pain, nausea, and unexplained iron deficiency anaemia. Procedures are performed under gentle sedation."
+        "Gastroscopy allows visual examination and mucosal biopsy of the oesophagus, stomach, and duodenum. It is commonly arranged to investigate persistent reflux, swallowing difficulties, suspected coeliac disease, upper abdominal pain, nausea, and iron deficiency. Procedures are performed under gentle sedation."
     },
     {
       title: "Colonoscopy & Polypectomy",
       body:
-        "Colonoscopy is the gold-standard procedure for examining the large bowel (colon and rectum). Key indications include investigating positive faecal occult blood tests (FOBT), bowel cancer screening, rectal bleeding, chronic diarrhoea or altered bowel habits, surveillance following previous polyp removal, and assessment of inflammatory bowel disease (Crohn's and colitis). Polypectomy is performed where polyps are detected."
-    },
-    {
-      title: "High-Resolution Oesophageal Manometry",
-      body:
-        "High-resolution manometry provides precise pressure measurement along the oesophagus during swallowing, enabling accurate diagnosis of oesophageal motility disorders (such as achalasia, oesophagogastric junction outflow obstruction, and hypercontractile oesophagus) and aiding in refractory reflux assessment. Dr Basnayake leads the Oesophageal Physiology Laboratory at St Vincent's Hospital Melbourne following his advanced motility fellowship at KU Leuven, Belgium."
+        "Colonoscopy is the primary procedure for evaluating the large bowel. Common indications include positive bowel cancer screening tests (FOBT), investigation of rectal bleeding or altered bowel habit, iron deficiency, surveillance following previous polyps, and assessment of inflammatory bowel disease. Polypectomy is performed when polyps are identified."
     }
   ],
   pathway:
-    `Direct open-access gastroscopy and colonoscopy can be arranged for straightforward indications when clinically appropriate. Procedures are performed through ${siteConfig.contact.procedures.join(", ")}, with comprehensive reports and recommended follow-up provided promptly to referring doctors.`
+    `Direct open-access gastroscopy and colonoscopy can be arranged for straightforward indications when clinically appropriate. Procedures are performed through ${siteConfig.contact.procedures.join(", ")}, with comprehensive reports provided promptly to referring doctors.`,
+  publicPhysiologyNotice:
+    "High-resolution oesophageal manometry and specialized oesophageal physiological testing are conducted through the public hospital system at the St Vincent's Hospital Melbourne Oesophageal Physiology Laboratory, where Associate Professor Basnayake serves as Clinical Lead."
 };
 
 export const patientsContent = {

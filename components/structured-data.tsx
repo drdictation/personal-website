@@ -25,7 +25,6 @@ export function StructuredData() {
         url: baseUrl,
         telephone: siteConfig.contact.phone,
         email: siteConfig.contact.email,
-        priceRange: "$$",
         medicalSpecialty: "https://schema.org/Gastroenterology",
         address: {
           "@type": "PostalAddress",
@@ -35,25 +34,6 @@ export function StructuredData() {
           postalCode: "3002",
           addressCountry: "AU"
         },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: -37.8087,
-          longitude: 144.976
-        },
-        areaServed: [
-          {
-            "@type": "City",
-            name: "Melbourne"
-          },
-          {
-            "@type": "AdministrativeArea",
-            name: "Victoria"
-          },
-          {
-            "@type": "Country",
-            name: "Australia"
-          }
-        ],
         hasCredential: [
           {
             "@type": "EducationalOccupationalCredential",
@@ -132,8 +112,6 @@ export function StructuredData() {
           "High-Resolution Oesophageal Manometry",
           "Eosinophilic Oesophagitis (EoE)",
           "Inflammatory Bowel Disease (IBD)",
-          "Crohn's Disease",
-          "Ulcerative Colitis",
           "Coeliac Disease",
           "Bowel Cancer Screening",
           "Polypectomy",
@@ -154,9 +132,6 @@ export function StructuredData() {
         telephone: siteConfig.contact.phone,
         faxNumber: siteConfig.contact.fax,
         email: siteConfig.contact.email,
-        priceRange: "$$",
-        currenciesAccepted: "AUD",
-        paymentAccepted: "Cash, Credit Card, Direct Debit",
         address: {
           "@type": "PostalAddress",
           streetAddress: siteConfig.contact.addressLine1,
@@ -164,11 +139,6 @@ export function StructuredData() {
           addressRegion: "VIC",
           postalCode: "3002",
           addressCountry: "AU"
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: -37.8087,
-          longitude: 144.976
         },
         physician: {
           "@id": `${baseUrl}/#physician`
@@ -191,13 +161,6 @@ export function StructuredData() {
             procedureType: "https://schema.org/DiagnosticProcedure",
             description:
               "Lower gastrointestinal endoscopy for bowel cancer screening, positive FOBT, polyp surveillance, rectal bleeding, and inflammatory bowel disease."
-          },
-          {
-            "@type": "MedicalProcedure",
-            name: "Oesophageal High-Resolution Manometry",
-            procedureType: "https://schema.org/DiagnosticProcedure",
-            description:
-              "Tertiary-level physiological assessment of oesophageal motility, achalasia, non-cardiac chest pain, and refractory reflux."
           }
         ]
       },

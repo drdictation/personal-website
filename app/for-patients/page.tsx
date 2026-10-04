@@ -5,7 +5,7 @@ import { BreadcrumbStructuredData } from "@/components/breadcrumb-structured-dat
 import { FaqList } from "@/components/faq-list";
 import { FaqStructuredData } from "@/components/faq-structured-data";
 import { PageHero } from "@/components/page-hero";
-import { patientsContent, siteConfig } from "@/lib/site-content";
+import { patientsContent } from "@/lib/site-content";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata(
@@ -16,26 +16,9 @@ export const metadata: Metadata = buildMetadata(
 );
 
 export default function ForPatientsPage() {
-  const baseUrl = siteConfig.siteUrl.replace(/\/+$/, "");
-
-  const pageSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "@id": `${baseUrl}/for-patients#webpage`,
-    url: `${baseUrl}/for-patients`,
-    name: "Patient Information and Consultation Details",
-    author: {
-      "@id": `${baseUrl}/#physician`
-    }
-  };
-
   return (
     <>
       <BreadcrumbStructuredData items={[{ name: "For Patients", item: "/for-patients" }]} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
       <FaqStructuredData faqs={patientsContent.faqs} />
       <PageHero {...patientsContent.hero} />
       <section className="shell section">

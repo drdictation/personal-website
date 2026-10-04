@@ -16,26 +16,9 @@ export const metadata: Metadata = buildMetadata(
 );
 
 export default function AboutPage() {
-  const baseUrl = siteConfig.siteUrl.replace(/\/+$/, "");
-
-  const profilePageSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "@id": `${baseUrl}/about#webpage`,
-    url: `${baseUrl}/about`,
-    name: "About Associate Professor Chamara Basnayake",
-    mainEntity: {
-      "@id": `${baseUrl}/#physician`
-    }
-  };
-
   return (
     <>
       <BreadcrumbStructuredData items={[{ name: "About", item: "/about" }]} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
-      />
       <PageHero {...aboutContent.hero} />
       <ScrollReveal as="section" className="shell section">
         <div className="prose-block">

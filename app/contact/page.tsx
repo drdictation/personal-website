@@ -14,26 +14,9 @@ export const metadata: Metadata = buildMetadata(
 );
 
 export default function ContactPage() {
-  const baseUrl = siteConfig.siteUrl.replace(/\/+$/, "");
-
-  const contactSchema = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "@id": `${baseUrl}/contact#webpage`,
-    url: `${baseUrl}/contact`,
-    name: "Contact Focus Gastroenterology - A/Prof Chamara Basnayake",
-    mainEntity: {
-      "@id": `${baseUrl}/#clinic`
-    }
-  };
-
   return (
     <>
       <BreadcrumbStructuredData items={[{ name: "Contact", item: "/contact" }]} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
-      />
       <PageHero {...contactContent.hero} />
       <section className="shell section split-section">
         <div className="feature-card">

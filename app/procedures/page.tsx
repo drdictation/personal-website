@@ -4,65 +4,27 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { BreadcrumbStructuredData } from "@/components/breadcrumb-structured-data";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
-import { proceduresContent, siteConfig } from "@/lib/site-content";
+import { proceduresContent } from "@/lib/site-content";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata(
   "Gastroscopy & Colonoscopy Melbourne | Endoscopy Procedures",
-  "Diagnostic gastroscopy, colonoscopy, bowel cancer screening, and high-resolution oesophageal manometry in Melbourne by A/Prof Chamara Basnayake.",
+  "Diagnostic gastroscopy, colonoscopy, and bowel cancer screening in Melbourne by Associate Professor Chamara Basnayake.",
   "/procedures",
   { exactTitle: true }
 );
 
 export default function ProceduresPage() {
-  const baseUrl = siteConfig.siteUrl.replace(/\/+$/, "");
-
-  const proceduresSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "@id": `${baseUrl}/procedures#webpage`,
-    url: `${baseUrl}/procedures`,
-    name: "Endoscopy and Diagnostic Procedures in Melbourne",
-    description: "Gastroscopy, colonoscopy, bowel cancer screening, and oesophageal physiology assessment.",
-    author: {
-      "@id": `${baseUrl}/#physician`
-    },
-    about: [
-      {
-        "@type": "MedicalProcedure",
-        name: "Gastroscopy",
-        procedureType: "https://schema.org/DiagnosticProcedure",
-        description: "Diagnostic upper gastrointestinal endoscopy to assess reflux, swallowing difficulties, coeliac disease, and persistent upper digestive symptoms."
-      },
-      {
-        "@type": "MedicalProcedure",
-        name: "Colonoscopy",
-        procedureType: "https://schema.org/DiagnosticProcedure",
-        description: "Lower gastrointestinal endoscopy for bowel cancer screening, positive FOBT, polyp surveillance, rectal bleeding, and inflammatory bowel disease."
-      },
-      {
-        "@type": "MedicalProcedure",
-        name: "High-Resolution Oesophageal Manometry",
-        procedureType: "https://schema.org/DiagnosticProcedure",
-        description: "Tertiary-level physiological assessment of oesophageal motility, achalasia, non-cardiac chest pain, and refractory reflux."
-      }
-    ]
-  };
-
   return (
     <>
       <BreadcrumbStructuredData items={[{ name: "Procedures", item: "/procedures" }]} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(proceduresSchema) }}
-      />
       <PageHero {...proceduresContent.hero} />
 
       <ScrollReveal as="section" className="shell section">
         <SectionHeading
           eyebrow="Specialist Endoscopy"
-          title="Diagnostic &amp; Physiological Investigations"
-          body="Procedures are performed with gentle sedation at leading Melbourne hospitals with modern endoscopy facilities and strict quality assurance."
+          title="Diagnostic Endoscopy Procedures"
+          body="Procedures are performed with gentle sedation at accredited Melbourne private hospital facilities with modern endoscopy suites and comprehensive clinical monitoring."
         />
         <div className="editorial-grid">
           {proceduresContent.procedures.map((procedure) => (
@@ -71,6 +33,15 @@ export default function ProceduresPage() {
               <p>{procedure.body}</p>
             </article>
           ))}
+        </div>
+      </ScrollReveal>
+
+      <ScrollReveal as="section" className="shell section">
+        <div className="note-panel">
+          <h2>Oesophageal Motility &amp; Manometry</h2>
+          <p style={{ marginTop: "0.75rem" }}>
+            {proceduresContent.publicPhysiologyNotice}
+          </p>
         </div>
       </ScrollReveal>
 

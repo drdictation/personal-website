@@ -14,27 +14,9 @@ export const metadata: Metadata = buildMetadata(
 );
 
 export default function ForReferrersPage() {
-  const baseUrl = siteConfig.siteUrl.replace(/\/+$/, "");
-
-  const pageSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "@id": `${baseUrl}/for-referrers#webpage`,
-    url: `${baseUrl}/for-referrers`,
-    name: "Information for Referring Medical Practitioners",
-    description: "Referral pathways, open-access gastroscopy and colonoscopy indications, and communication protocols for doctors.",
-    author: {
-      "@id": `${baseUrl}/#physician`
-    }
-  };
-
   return (
     <>
       <BreadcrumbStructuredData items={[{ name: "For Referrers", item: "/for-referrers" }]} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
       <PageHero {...referrersContent.hero} />
       <section className="shell section split-section">
         <div className="feature-card">
