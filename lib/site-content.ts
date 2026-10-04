@@ -18,6 +18,8 @@ export const siteConfig = {
     "Specialist gastroenterology care in Melbourne spanning digestive symptoms, bowel cancer screening, iron deficiency, reflux, inflammatory bowel disease, coeliac disease, eosinophilic oesophagitis, and oesophageal disorders.",
   googleScholar:
     "https://scholar.google.com/citations?user=0sERojoAAAAJ&hl=en&oi=ao",
+  findAnExpert:
+    "https://findanexpert.unimelb.edu.au/profile/775850-chamara-basnayake",
   contact: {
     practice: "Focus Gastroenterology",
     addressLine1: "Suite 201, Level 2, 100 Victoria Parade",

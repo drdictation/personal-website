@@ -38,7 +38,7 @@ export default function ResearchPage() {
             <Link className="button button-primary" href={siteConfig.googleScholar} target="_blank" rel="noopener noreferrer">
               View Google Scholar Profile &rarr;
             </Link>
-            <Link className="button button-secondary" href="https://findanexpert.unimelb.edu.au/profile/866034-chamara-basnayake" target="_blank" rel="noopener noreferrer">
+            <Link className="button button-secondary" href={siteConfig.findAnExpert} target="_blank" rel="noopener noreferrer">
               University of Melbourne Profile &rarr;
             </Link>
             <Link className="button button-secondary" href="/about">

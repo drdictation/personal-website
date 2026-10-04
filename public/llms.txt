@@ -51,5 +51,5 @@
 - [Research & Publications](/research): Information on academic studies (including the MANTRA trial in Lancet Gastroenterology & Hepatology), clinical trials, and media.
 - [Contact](/contact): Practice contact details, consulting suites, transport, and map.
 - [Google Scholar Profile](https://scholar.google.com/citations?user=0sERojoAAAAJ&hl=en&oi=ao): Comprehensive list of peer-reviewed publications.
-- [University of Melbourne Profile](https://findanexpert.unimelb.edu.au/profile/866034-chamara-basnayake): Academic and faculty appointments.
+- [University of Melbourne Profile](https://findanexpert.unimelb.edu.au/profile/775850-chamara-basnayake): Academic and faculty appointments.
 - [Full LLM Knowledge Base](/llms-full.txt): Complete site text in markdown format.

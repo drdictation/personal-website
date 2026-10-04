@@ -98,7 +98,7 @@ export function StructuredData() {
         ],
         sameAs: [
           siteConfig.googleScholar,
-          "https://findanexpert.unimelb.edu.au/profile/866034-chamara-basnayake",
+          siteConfig.findAnExpert,
           "https://pubmed.ncbi.nlm.nih.gov/?term=Basnayake+C%5BAuthor%5D"
         ],
         knowsAbout: [
