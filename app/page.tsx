@@ -1,15 +1,24 @@
-import { ScrollReveal } from "@/components/scroll-reveal";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { ExpandableCard } from "@/components/expandable-card";
 import { LocationPreview } from "@/components/location-preview";
 import { SectionHeading } from "@/components/section-heading";
+import { buildMetadata } from "@/lib/metadata";
 import { homeContent, siteConfig } from "@/lib/site-content";
+
+export const metadata: Metadata = buildMetadata(
+  "A/Prof Chamara Basnayake | Gastroenterologist Melbourne",
+  "Associate Professor Chamara Basnayake is a consultant gastroenterologist and endoscopist in East Melbourne specialising in digestive health, endoscopy, colonoscopy, IBS, reflux, and motility.",
+  "/",
+  { exactTitle: true }
+);
 
 export default function HomePage() {
   return (
     <>
-      <ScrollReveal as="section" className="hero shell">
+      <section className="hero shell">
         <div className="hero-copy">
           <p className="eyebrow">{homeContent.hero.eyebrow}</p>
           <h1>{homeContent.hero.title}</h1>
@@ -32,7 +41,7 @@ export default function HomePage() {
           <div className="portrait-frame">
             <Image
               src="/images/chamara-headshot.jpg"
-              alt="Associate Professor Chamara Basnayake"
+              alt="Associate Professor Chamara Basnayake, Consultant Gastroenterologist and Endoscopist in Melbourne"
               width={780}
               height={940}
               priority
@@ -47,7 +56,7 @@ export default function HomePage() {
             </ul>
           </div>
         </div>
-      </ScrollReveal>
+      </section>
 
       <ScrollReveal as="section" className="shell section">
         <SectionHeading
@@ -64,6 +73,11 @@ export default function HomePage() {
             />
           ))}
         </div>
+        <div style={{ marginTop: "2rem", textAlign: "center" }}>
+          <Link className="button button-secondary" href="/conditions">
+            View all conditions, symptoms &amp; clinical pathways &rarr;
+          </Link>
+        </div>
       </ScrollReveal>
 
       <ScrollReveal as="section" className="shell section split-section">
@@ -73,6 +87,11 @@ export default function HomePage() {
             title={homeContent.procedures.title}
             body={homeContent.procedures.body}
           />
+          <div style={{ marginTop: "1.5rem" }}>
+            <Link className="button button-secondary" href="/procedures">
+              Explore endoscopy procedures &amp; hospital locations &rarr;
+            </Link>
+          </div>
         </div>
         <div className="pill-panel">
           {homeContent.procedures.items.map((item) => (
@@ -97,6 +116,11 @@ export default function HomePage() {
                 <p>{item}</p>
               </div>
             ))}
+          </div>
+          <div style={{ marginTop: "1.5rem" }}>
+            <Link className="button button-secondary" href="/research">
+              View research, clinical trials &amp; publications &rarr;
+            </Link>
           </div>
         </div>
       </ScrollReveal>
@@ -125,6 +149,14 @@ export default function HomePage() {
             {siteConfig.contact.phone}
           </a>
           <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>
+        </div>
+        <div className="hero-actions" style={{ marginTop: "1.5rem", justifyContent: "center" }}>
+          <Link className="button button-primary" href="/contact">
+            Contact &amp; Location Details
+          </Link>
+          <Link className="button button-secondary" href="/for-referrers">
+            Information for Referrers
+          </Link>
         </div>
       </ScrollReveal>
     </>

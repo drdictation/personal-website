@@ -20,7 +20,7 @@ export const siteConfig = {
     "https://scholar.google.com/citations?user=0sERojoAAAAJ&hl=en&oi=ao",
   contact: {
     practice: "Focus Gastroenterology",
-    addressLine1: "Suite 201, Level 2, 100 Victoria parade",
+    addressLine1: "Suite 201, Level 2, 100 Victoria Parade",
     addressLine2: "East Melbourne 3002",
     phone: "(03) 9650 7917",
     fax: "(03) 9650 7910",
@@ -52,7 +52,7 @@ export const homeContent = {
     title: "Specialist Gastroenterology Care in Melbourne",
     summary:
       "An internationally recognised expert in gastroenterology, Associate Professor Chamara Basnayake provides high-quality care across both the public and private health sectors. He translates his active clinical research program into highly focused and thorough assessment for his patients.",
-    primaryAction: { href: "/about", label: "Learn more" },
+    primaryAction: { href: "/about", label: "About Dr Basnayake" },
     secondaryAction: { href: "/contact", label: "Contact" },
     highlights: [
       "General gastroenterology and endoscopy",
@@ -183,63 +183,101 @@ export const aboutContent = {
 
 export const conditionsContent = {
   hero: {
-    eyebrow: "Conditions and symptoms",
-    title: "General gastroenterology and focused subspecialty care",
+    eyebrow: "Conditions & Subspecialties",
+    title: "Gastrointestinal Conditions & Symptoms",
     intro:
-      "The practice sees common gastroenterology referrals as well as more specialised oesophageal, inflammatory, and immune-mediated disorders. While Associate Professor Basnayake has recognised expertise in disorders of gut-brain interaction, private-practice referrals are not limited to that area."
+      "Associate Professor Chamara Basnayake provides specialist assessment and evidence-based management for general gastroenterological symptoms as well as tertiary subspecialty disorders. Consultations focus on structured diagnostic assessment, targeted investigation, and personalised multidisciplinary care."
   },
-  symptomGroups: [
+  subspecialties: [
     {
-      title: "Digestive symptoms",
-      body:
-        "Symptoms such as bleeding, bowel change, reflux, dysphagia, abdominal pain, or iron deficiency often need structured clinical assessment to determine whether reassurance, medical treatment, endoscopic investigation, or longer-term specialist care is appropriate.",
-      items: [
-        "Abdominal pain",
-        "Altered bowel habit",
-        "Diarrhoea",
-        "Constipation",
-        "Rectal bleeding",
-        "Reflux",
-        "Swallowing difficulties"
-      ]
+      title: "Disorders of Gut-Brain Interaction & Irritable Bowel Syndrome (IBS)",
+      description:
+        "Chronic abdominal pain, altered bowel habits (diarrhoea or constipation), bloating, and functional dyspepsia. Dr Basnayake led the landmark MANTRA randomised controlled trial (Lancet Gastroenterology & Hepatology) and co-founded the Multidisciplinary Functional Gut Clinic at St Vincent's Hospital Melbourne, championing integrated medical, dietary, and gut-directed behavioural therapies.",
+      keyAreas: ["Irritable Bowel Syndrome (IBS)", "Functional Dyspepsia", "Chronic Bloating & Distension", "Constipation & Diarrhoea"]
     },
     {
-      title: "Specific conditions",
+      title: "Oesophageal Motility Disorders, Reflux & Dysphagia",
+      description:
+        "Investigation of persistent gastro-oesophageal reflux disease (GORD / GERD), difficulty swallowing (dysphagia), non-cardiac chest pain, and motility conditions including achalasia and oesophageal spasm. Diagnostic workup integrates gastroscopy with high-resolution oesophageal manometry.",
+      keyAreas: ["GORD / Refractory Reflux", "Dysphagia (Difficulty Swallowing)", "Achalasia & Motility Disorders", "High-Resolution Manometry"]
+    },
+    {
+      title: "Eosinophilic Oesophagitis (EoE)",
+      description:
+        "Specialist diagnosis, structured endoscopic mucosal biopsy protocols, and ongoing management of EoE in adolescents and adults. Management encompasses dietary elimination therapy, swallowed topical corticosteroids, and eligibility assessment for clinical trials where Dr Basnayake acts as Principal Investigator.",
+      keyAreas: ["EoE Diagnosis & Biopsy", "Dietary Elimination Therapy", "Medical Therapy", "Clinical Trial Pathways"]
+    },
+    {
+      title: "Coeliac Disease",
+      description:
+        "Accurate serological and endoscopic confirmation of coeliac disease, structured nutritional monitoring, and evaluation of non-responsive or refractory coeliac symptoms. Dr Basnayake serves as Principal Investigator on international coeliac clinical trials.",
+      keyAreas: ["Biopsy Confirmation", "Refractory Coeliac Disease", "Nutritional Follow-up", "Clinical Trials"]
+    },
+    {
+      title: "Inflammatory Bowel Disease (IBD)",
+      description:
+        "Comprehensive diagnostic assessment, endoscopic monitoring, and long-term medical management of Crohn's disease and ulcerative colitis. Focus areas include multidisciplinary decision-making, biologic and advanced small-molecule therapies, and research into microbiota-based treatments.",
+      keyAreas: ["Crohn's Disease", "Ulcerative Colitis", "Biologic Therapies", "Endoscopic Surveillance"]
+    },
+    {
+      title: "Bowel Cancer Screening & Colorectal Polyp Surveillance",
+      description:
+        "Comprehensive evaluation and high-quality colonoscopy following positive National Bowel Cancer Screening Program (NBCSP) faecal occult blood tests (FOBT), strong family history of colorectal cancer, or scheduled surveillance following previous adenomatous polyps.",
+      keyAreas: ["Positive FOBT Investigation", "Screening Colonoscopy", "Polypectomy", "Family History Risk Assessment"]
+    },
+    {
+      title: "Iron Deficiency & Gastrointestinal Blood Loss",
+      description:
+        "Structured endoscopic investigation (gastroscopy and colonoscopy) to detect occult bleeding sources, malabsorption, coeliac disease, or vascular lesions in patients with unexplained iron deficiency anaemia.",
+      keyAreas: ["Iron Deficiency Anaemia", "Occult GI Bleeding", "Dual Endoscopic Assessment", "Cause Identification"]
+    }
+  ],
+  symptomGroups: [
+    {
+      title: "Common Digestive Symptoms Assessed",
       body:
-        "Some referrals involve an established diagnosis, while others concern confirmation, clarification, or reassessment after symptoms have changed. Investigation and treatment planning are guided by the referral question, previous testing, and the wider clinical context.",
+        "Symptoms such as bleeding, altered bowel habit, persistent reflux, difficulty swallowing, chronic abdominal pain, or unexplained weight loss require structured clinical assessment to identify underlying causes and tailor therapy.",
       items: [
-        "Coeliac disease",
-        "Inflammatory bowel disease",
-        "Eosinophilic oesophagitis",
-        "Oesophageal disorders"
+        "Abdominal pain and discomfort",
+        "Altered bowel habit (diarrhoea, constipation, alternating)",
+        "Persistent heartburn, acid regurgitation and reflux",
+        "Swallowing difficulties (dysphagia) or food bolus obstruction",
+        "Rectal bleeding or positive faecal occult blood test",
+        "Persistent bloating and abdominal distension",
+        "Unexplained iron deficiency anaemia or weight loss"
       ]
     }
   ],
   note:
-    "Where appropriate, assessment may include endoscopy, pathology review, imaging review, or a staged management plan developed with the referring doctor."
+    "Where appropriate, clinical assessment may include diagnostic endoscopy (gastroscopy/colonoscopy), high-resolution oesophageal manometry, specialised pathology review, imaging, or a staged multidisciplinary plan coordinated with referring general practitioners."
 };
 
 export const proceduresContent = {
   hero: {
-    eyebrow: "Procedures",
-    title: "Endoscopy and Procedures",
+    eyebrow: "Procedures & Diagnostics",
+    title: "Endoscopy and Diagnostic Procedures",
     intro:
-      "Gastroscopy, colonoscopy, and related diagnostic procedures are offered as part of specialist gastroenterology assessment. The emphasis is on selecting the right test for the right clinical question, offering prompt access where appropriate, and ensuring that findings are communicated clearly."
+      "Associate Professor Basnayake performs diagnostic and therapeutic endoscopy across major private hospital facilities in Melbourne. High-quality procedural care is paired with clear clinical communication and prompt reporting."
   },
   procedures: [
     {
-      title: "Gastroscopy",
+      title: "Gastroscopy (Upper GI Endoscopy)",
       body:
-        "Gastroscopy is used to assess reflux, upper abdominal symptoms, iron deficiency, coeliac disease, and swallowing difficulties."
+        "Gastroscopy allows detailed visual examination and biopsy of the oesophagus, stomach, and duodenum. It is indicated for evaluating persistent reflux, swallowing difficulties (dysphagia), suspected coeliac disease, eosinophilic oesophagitis (EoE), upper abdominal pain, nausea, and unexplained iron deficiency anaemia. Procedures are performed under gentle sedation."
     },
     {
-      title: "Colonoscopy",
+      title: "Colonoscopy & Polypectomy",
       body:
-        "Colonoscopy is arranged for bowel cancer screening, positive faecal occult blood testing, rectal bleeding, altered bowel habit, iron deficiency, surveillance after previous polyps, and assessment of suspected inflammatory bowel disease. Open-access pathways are available."
+        "Colonoscopy is the gold-standard procedure for examining the large bowel (colon and rectum). Key indications include investigating positive faecal occult blood tests (FOBT), bowel cancer screening, rectal bleeding, chronic diarrhoea or altered bowel habits, surveillance following previous polyp removal, and assessment of inflammatory bowel disease (Crohn's and colitis). Polypectomy is performed where polyps are detected."
+    },
+    {
+      title: "High-Resolution Oesophageal Manometry",
+      body:
+        "High-resolution manometry provides precise pressure measurement along the oesophagus during swallowing, enabling accurate diagnosis of oesophageal motility disorders (such as achalasia, oesophagogastric junction outflow obstruction, and hypercontractile oesophagus) and aiding in refractory reflux assessment. Dr Basnayake leads the Oesophageal Physiology Laboratory at St Vincent's Hospital Melbourne following his advanced motility fellowship at KU Leuven, Belgium."
     }
   ],
   pathway:
-    `Open-access gastroscopy and colonoscopy can be arranged when the indication is straightforward. Procedures are performed through ${siteConfig.contact.procedures.join(", ")}, with prior consultation when the diagnostic question is broader or second-opinion input is needed.`
+    `Direct open-access gastroscopy and colonoscopy can be arranged for straightforward indications when clinically appropriate. Procedures are performed through ${siteConfig.contact.procedures.join(", ")}, with comprehensive reports and recommended follow-up provided promptly to referring doctors.`
 };
 
 export const patientsContent = {

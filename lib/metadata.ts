@@ -7,10 +7,13 @@ export const siteUrl = siteConfig.siteUrl;
 export function buildMetadata(
   title: string,
   description: string,
-  path = "/"
+  path = "/",
+  options?: { exactTitle?: boolean }
 ): Metadata {
   const resolvedTitle =
-    path === "/" ? `${title} | ${siteConfig.name}` : `${title} | ${siteConfig.shortName}`;
+    options?.exactTitle || title.includes("Basnayake")
+      ? title
+      : `${title} | ${siteConfig.shortName}`;
 
   return {
     title: resolvedTitle,
@@ -19,25 +22,26 @@ export function buildMetadata(
       canonical: path
     },
     openGraph: {
-      title,
+      title: resolvedTitle,
       description,
       url: path,
       type: "website",
-      siteName: siteConfig.name,
+      siteName: `${siteConfig.name} - Melbourne Gastroenterology`,
+      locale: "en_AU",
       images: [
         {
-          url: "/images/og-card.svg",
+          url: "/images/og-card.png",
           width: 1200,
           height: 630,
-          alt: `${siteConfig.name} website preview`
+          alt: `${siteConfig.name} - Consultant Gastroenterologist Melbourne`
         }
       ]
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: resolvedTitle,
       description,
-      images: ["/images/og-card.svg"]
+      images: ["/images/og-card.png"]
     },
     icons: {
       icon: "/favicon.png",

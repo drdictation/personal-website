@@ -1,23 +1,43 @@
 import type { Metadata } from "next";
 
+import { BreadcrumbStructuredData } from "@/components/breadcrumb-structured-data";
 import { LocationPreview } from "@/components/location-preview";
 import { PageHero } from "@/components/page-hero";
 import { buildMetadata } from "@/lib/metadata";
 import { contactContent, siteConfig } from "@/lib/site-content";
 
 export const metadata: Metadata = buildMetadata(
-  "Contact",
-  "Practice contact details, referral instructions, location information, and transport guidance for Focus Gastroenterology in East Melbourne.",
-  "/contact"
+  "Contact Focus Gastroenterology | East Melbourne Consulting",
+  "Contact details, consulting suites at 100 Victoria Parade East Melbourne, phone, fax, and email for Associate Professor Chamara Basnayake.",
+  "/contact",
+  { exactTitle: true }
 );
 
 export default function ContactPage() {
+  const baseUrl = siteConfig.siteUrl.replace(/\/+$/, "");
+
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${baseUrl}/contact#webpage`,
+    url: `${baseUrl}/contact`,
+    name: "Contact Focus Gastroenterology - A/Prof Chamara Basnayake",
+    mainEntity: {
+      "@id": `${baseUrl}/#clinic`
+    }
+  };
+
   return (
     <>
+      <BreadcrumbStructuredData items={[{ name: "Contact", item: "/contact" }]} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       <PageHero {...contactContent.hero} />
       <section className="shell section split-section">
         <div className="feature-card">
-          <h2>Practice details</h2>
+          <h2>Practice Details</h2>
           <p>
             Consulting at {siteConfig.contact.practice} from {siteConfig.contact.consultingStart}.
           </p>
@@ -55,11 +75,11 @@ export default function ContactPage() {
           </dl>
         </div>
         <div className="feature-card feature-card-alt">
-          <h2>Referral instructions</h2>
+          <h2>Referral &amp; Procedure Locations</h2>
           <p>{contactContent.referralNote}</p>
-          <p>{contactContent.transport}</p>
-          <p>
-            Private procedure locations currently include {siteConfig.contact.procedures.join(" and ")}.
+          <p style={{ marginTop: "0.5rem" }}>{contactContent.transport}</p>
+          <p style={{ marginTop: "0.5rem" }}>
+            <strong>Procedural Hospitals:</strong> {siteConfig.contact.procedures.join(", ")}.
           </p>
         </div>
       </section>

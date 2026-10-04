@@ -5,13 +5,15 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StructuredData } from "@/components/structured-data";
 import { buildMetadata, siteUrl } from "@/lib/metadata";
-import { siteConfig } from "@/lib/site-content";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  ...buildMetadata("Specialist Gastroenterology Care in Melbourne", siteConfig.description)
+  ...buildMetadata(
+    "A/Prof Chamara Basnayake | Gastroenterologist Melbourne",
+    "Specialist gastroenterologist in East Melbourne. Expert care in endoscopy, colonoscopy, bowel cancer screening, IBS, reflux, coeliac disease, IBD & motility disorders."
+  )
 };
 
 export default function RootLayout({

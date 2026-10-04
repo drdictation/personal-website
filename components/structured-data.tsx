@@ -10,6 +10,12 @@ export function StructuredData() {
         "@type": "Physician",
         "@id": `${baseUrl}/#physician`,
         name: siteConfig.name,
+        alternateName: [
+          "Dr Chamara Basnayake",
+          "A/Prof Chamara Basnayake",
+          "Associate Professor Chamara Basnayake",
+          "Chamara Basnayake"
+        ],
         givenName: "Chamara",
         familyName: "Basnayake",
         honorificPrefix: "Associate Professor",
@@ -17,11 +23,37 @@ export function StructuredData() {
         description: siteConfig.description,
         image: `${baseUrl}/images/chamara-headshot.jpg`,
         url: baseUrl,
+        telephone: siteConfig.contact.phone,
+        email: siteConfig.contact.email,
+        priceRange: "$$",
         medicalSpecialty: "https://schema.org/Gastroenterology",
-        areaServed: {
-          "@type": "AdministrativeArea",
-          name: "Melbourne, Victoria, Australia"
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.contact.addressLine1,
+          addressLocality: "East Melbourne",
+          addressRegion: "VIC",
+          postalCode: "3002",
+          addressCountry: "AU"
         },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: -37.8087,
+          longitude: 144.976
+        },
+        areaServed: [
+          {
+            "@type": "City",
+            name: "Melbourne"
+          },
+          {
+            "@type": "AdministrativeArea",
+            name: "Victoria"
+          },
+          {
+            "@type": "Country",
+            name: "Australia"
+          }
+        ],
         hasCredential: [
           {
             "@type": "EducationalOccupationalCredential",
@@ -90,16 +122,21 @@ export function StructuredData() {
           "https://pubmed.ncbi.nlm.nih.gov/?term=Basnayake+C%5BAuthor%5D"
         ],
         knowsAbout: [
+          "Gastroenterology",
+          "Endoscopy",
+          "Colonoscopy",
           "Disorders of Gut-Brain Interaction (DGBI)",
           "Irritable Bowel Syndrome (IBS)",
+          "Functional Dyspepsia",
           "Oesophageal Motility Disorders",
           "High-Resolution Oesophageal Manometry",
           "Eosinophilic Oesophagitis (EoE)",
           "Inflammatory Bowel Disease (IBD)",
+          "Crohn's Disease",
+          "Ulcerative Colitis",
           "Coeliac Disease",
           "Bowel Cancer Screening",
-          "Colonoscopy and Polypectomy",
-          "Gastroscopy (Endoscopy)",
+          "Polypectomy",
           "Iron Deficiency and Anaemia",
           "Gastro-oesophageal Reflux Disease (GORD)",
           "Dysphagia"
@@ -117,6 +154,9 @@ export function StructuredData() {
         telephone: siteConfig.contact.phone,
         faxNumber: siteConfig.contact.fax,
         email: siteConfig.contact.email,
+        priceRange: "$$",
+        currenciesAccepted: "AUD",
+        paymentAccepted: "Cash, Credit Card, Direct Debit",
         address: {
           "@type": "PostalAddress",
           streetAddress: siteConfig.contact.addressLine1,
@@ -124,6 +164,11 @@ export function StructuredData() {
           addressRegion: "VIC",
           postalCode: "3002",
           addressCountry: "AU"
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: -37.8087,
+          longitude: 144.976
         },
         physician: {
           "@id": `${baseUrl}/#physician`

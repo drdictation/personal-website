@@ -1,22 +1,44 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
+import { BreadcrumbStructuredData } from "@/components/breadcrumb-structured-data";
 import { PageHero } from "@/components/page-hero";
-import { referrersContent } from "@/lib/site-content";
+import { referrersContent, siteConfig } from "@/lib/site-content";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata(
-  "For Referrers",
-  "Referral information, procedure pathways, communication approach, and reporting expectations for GPs and specialists.",
-  "/for-referrers"
+  "GP & Specialist Referrals | Gastroenterology Melbourne",
+  "Referral guidelines, open-access endoscopy triage, and communication protocols for GPs and specialists referring to A/Prof Chamara Basnayake.",
+  "/for-referrers",
+  { exactTitle: true }
 );
 
 export default function ForReferrersPage() {
+  const baseUrl = siteConfig.siteUrl.replace(/\/+$/, "");
+
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "@id": `${baseUrl}/for-referrers#webpage`,
+    url: `${baseUrl}/for-referrers`,
+    name: "Information for Referring Medical Practitioners",
+    description: "Referral pathways, open-access gastroscopy and colonoscopy indications, and communication protocols for doctors.",
+    author: {
+      "@id": `${baseUrl}/#physician`
+    }
+  };
+
   return (
     <>
+      <BreadcrumbStructuredData items={[{ name: "For Referrers", item: "/for-referrers" }]} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
       <PageHero {...referrersContent.hero} />
       <section className="shell section split-section">
         <div className="feature-card">
-          <h2>Referral checklist</h2>
+          <h2>Referral Checklist</h2>
           <ul className="simple-list">
             {referrersContent.referralChecklist.map((item) => (
               <li key={item}>{item}</li>
@@ -24,10 +46,20 @@ export default function ForReferrersPage() {
           </ul>
         </div>
         <div className="note-panel">
-          <p>
-            Referrals are accepted for both consultation and procedural assessment, with clear
-            reporting and practical follow-up recommendations.
+          <h2>Direct Referral Submissions</h2>
+          <p style={{ marginTop: "0.5rem" }}>
+            Referrals are welcomed for outpatient consultation, direct-access endoscopy (gastroscopy and colonoscopy), and complex second-opinion assessments.
           </p>
+          <div style={{ marginTop: "1rem" }}>
+            <p><strong>Fax:</strong> {siteConfig.contact.fax}</p>
+            <p><strong>Email:</strong> <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a></p>
+            <p><strong>Phone:</strong> {siteConfig.contact.phone}</p>
+          </div>
+          <div style={{ marginTop: "1.5rem" }}>
+            <Link className="button button-primary" href="/contact">
+              View Consulting &amp; Location Details &rarr;
+            </Link>
+          </div>
         </div>
       </section>
       <section className="shell section">
@@ -38,6 +70,17 @@ export default function ForReferrersPage() {
               <p>{section.body}</p>
             </article>
           ))}
+        </div>
+        <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+          <Link className="button button-secondary" href="/procedures">
+            Endoscopy Indications &amp; Locations &rarr;
+          </Link>
+          <Link className="button button-secondary" href="/conditions">
+            Clinical Subspecialties Overview &rarr;
+          </Link>
+          <Link className="button button-secondary" href="/research">
+            Clinical Trials &amp; Research Portfolio &rarr;
+          </Link>
         </div>
       </section>
     </>

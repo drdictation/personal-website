@@ -1,20 +1,41 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
+import { BreadcrumbStructuredData } from "@/components/breadcrumb-structured-data";
 import { FaqList } from "@/components/faq-list";
 import { FaqStructuredData } from "@/components/faq-structured-data";
 import { PageHero } from "@/components/page-hero";
-import { patientsContent } from "@/lib/site-content";
+import { patientsContent, siteConfig } from "@/lib/site-content";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata(
-  "For Patients",
-  "Referral requirements, what to bring, appointment preparation, and practical gastroenterology consultation information for patients.",
-  "/for-patients"
+  "Patient Information & Appointments | Melbourne Gastroenterology",
+  "Information for patients seeing A/Prof Chamara Basnayake at Focus Gastroenterology: referrals, what to bring, consultation preparation, and hospital locations.",
+  "/for-patients",
+  { exactTitle: true }
 );
 
 export default function ForPatientsPage() {
+  const baseUrl = siteConfig.siteUrl.replace(/\/+$/, "");
+
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "@id": `${baseUrl}/for-patients#webpage`,
+    url: `${baseUrl}/for-patients`,
+    name: "Patient Information and Consultation Details",
+    author: {
+      "@id": `${baseUrl}/#physician`
+    }
+  };
+
   return (
     <>
+      <BreadcrumbStructuredData items={[{ name: "For Patients", item: "/for-patients" }]} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
       <FaqStructuredData faqs={patientsContent.faqs} />
       <PageHero {...patientsContent.hero} />
       <section className="shell section">
@@ -29,8 +50,19 @@ export default function ForPatientsPage() {
       </section>
       <section className="shell section">
         <div className="feature-card">
-          <h2>Frequently asked questions</h2>
+          <h2>Frequently Asked Questions</h2>
           <FaqList items={patientsContent.faqs} />
+          <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+            <Link className="button button-primary" href="/contact">
+              Contact &amp; Location Details &rarr;
+            </Link>
+            <Link className="button button-secondary" href="/procedures">
+              Endoscopy &amp; Procedure Information &rarr;
+            </Link>
+            <Link className="button button-secondary" href="/conditions">
+              Conditions &amp; Symptoms Overview &rarr;
+            </Link>
+          </div>
         </div>
       </section>
     </>
