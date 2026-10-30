@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/site-content";
+import { professionalRecognition, siteConfig } from "@/lib/site-content";
 
 export function StructuredData() {
   const baseUrl = siteConfig.siteUrl.replace(/\/+$/, "");
@@ -7,8 +7,8 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Physician",
-        "@id": `${baseUrl}/#physician`,
+        "@type": "Person",
+        "@id": `${baseUrl}/#person`,
         name: siteConfig.name,
         alternateName: [
           "Dr Chamara Basnayake",
@@ -20,12 +20,12 @@ export function StructuredData() {
         familyName: "Basnayake",
         honorificPrefix: "Associate Professor",
         jobTitle: siteConfig.role,
+        honorificSuffix: siteConfig.qualifications,
         description: siteConfig.description,
         image: `${baseUrl}/images/chamara-headshot.jpg`,
         url: baseUrl,
         telephone: siteConfig.contact.phone,
         email: siteConfig.contact.email,
-        medicalSpecialty: "https://schema.org/Gastroenterology",
         address: {
           "@type": "PostalAddress",
           streetAddress: siteConfig.contact.addressLine1,
@@ -49,6 +49,11 @@ export function StructuredData() {
             "@type": "EducationalOccupationalCredential",
             credentialCategory: "degree",
             name: "PhD in Medicine (University of Melbourne)"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: "fellowship",
+            name: "Fellow of GESA (FGESA), 2026"
           }
         ],
         alumniOf: [
@@ -85,21 +90,12 @@ export function StructuredData() {
           {
             "@type": "MedicalOrganization",
             name: "Royal Australasian College of Physicians (FRACP)"
-          },
-          {
-            "@type": "MedicalOrganization",
-            name: "The Rome Foundation"
           }
         ],
-        award: [
-          "Ray Clouse Award (2021) - The Rome Foundation",
-          "TJ Martin Award for Best PhD Project (2022) - St Vincent's Hospital Melbourne",
-          "John Burgess Prize for Best Medical Registrar - Monash Health"
-        ],
+        award: professionalRecognition.map(({ title, detail }) => `${title}: ${detail}`),
         sameAs: [
           siteConfig.googleScholar,
-          siteConfig.findAnExpert,
-          "https://pubmed.ncbi.nlm.nih.gov/?term=Basnayake+C%5BAuthor%5D"
+          siteConfig.findAnExpert
         ],
         knowsAbout: [
           "Gastroenterology",
@@ -124,11 +120,11 @@ export function StructuredData() {
         }
       },
       {
-        "@type": "MedicalClinic",
+        "@type": ["MedicalClinic", "Physician"],
         "@id": `${baseUrl}/#clinic`,
         name: siteConfig.contact.practice,
-        medicalSpecialty: "https://schema.org/Gastroenterology",
-        url: baseUrl,
+        medicalSpecialty: "https://schema.org/Gastroenterologic",
+        url: `${baseUrl}/contact`,
         telephone: siteConfig.contact.phone,
         faxNumber: siteConfig.contact.fax,
         email: siteConfig.contact.email,
@@ -140,8 +136,8 @@ export function StructuredData() {
           postalCode: "3002",
           addressCountry: "AU"
         },
-        physician: {
-          "@id": `${baseUrl}/#physician`
+        employee: {
+          "@id": `${baseUrl}/#person`
         },
         hospitalAffiliation: siteConfig.contact.procedures.map((name) => ({
           "@type": "Hospital",
@@ -151,6 +147,7 @@ export function StructuredData() {
           {
             "@type": "MedicalProcedure",
             name: "Gastroscopy",
+            url: `${baseUrl}/procedures/gastroscopy`,
             procedureType: "https://schema.org/DiagnosticProcedure",
             description:
               "Diagnostic upper gastrointestinal endoscopy to assess reflux, swallowing difficulties, coeliac disease, and persistent upper digestive symptoms."
@@ -158,6 +155,7 @@ export function StructuredData() {
           {
             "@type": "MedicalProcedure",
             name: "Colonoscopy",
+            url: `${baseUrl}/procedures/colonoscopy`,
             procedureType: "https://schema.org/DiagnosticProcedure",
             description:
               "Lower gastrointestinal endoscopy for bowel cancer screening, positive FOBT, polyp surveillance, rectal bleeding, and inflammatory bowel disease."
@@ -171,7 +169,7 @@ export function StructuredData() {
         name: `${siteConfig.name} - Melbourne Gastroenterology`,
         description: siteConfig.description,
         publisher: {
-          "@id": `${baseUrl}/#physician`
+          "@id": `${baseUrl}/#person`
         }
       }
     ]

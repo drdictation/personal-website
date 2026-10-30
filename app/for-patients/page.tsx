@@ -35,6 +35,9 @@ export default function ForPatientsPage() {
         <div className="feature-card">
           <h2>Frequently Asked Questions</h2>
           <FaqList items={patientsContent.faqs} />
+          <p className="supporting-note">
+            Some referral enquiries require prior discussion. <Link className="text-link" href="/for-referrers#referral-availability">Read about referral availability</Link>.
+          </p>
           <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link className="button button-primary" href="/contact">
               Contact &amp; Location Details &rarr;

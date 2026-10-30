@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/scroll-reveal";
-import { ExpandableCard } from "@/components/expandable-card";
 import { LocationPreview } from "@/components/location-preview";
 import { SectionHeading } from "@/components/section-heading";
+import { ProfessionalRecognition } from "@/components/professional-recognition";
 import { buildMetadata } from "@/lib/metadata";
 import { homeContent, siteConfig } from "@/lib/site-content";
 
 export const metadata: Metadata = buildMetadata(
   "A/Prof Chamara Basnayake | Gastroenterologist Melbourne",
-  "Associate Professor Chamara Basnayake is a consultant gastroenterologist and endoscopist in East Melbourne specialising in digestive health, endoscopy, colonoscopy, IBS, reflux, and motility.",
+  "Academic gastroenterologist and endoscopist in East Melbourne. Open-access gastroscopy and colonoscopy, with expertise in gut–brain and oesophageal disorders.",
   "/",
   { exactTitle: true }
 );
@@ -42,8 +42,9 @@ export default function HomePage() {
             <Image
               src="/images/chamara-headshot.jpg"
               alt="Associate Professor Chamara Basnayake, Consultant Gastroenterologist and Endoscopist in Melbourne"
-              width={780}
-              height={940}
+              width={2418}
+              height={2164}
+              sizes="(min-width: 1200px) 493px, (min-width: 768px) 44vw, calc(100vw - 2rem)"
               priority
             />
           </div>
@@ -57,28 +58,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <ScrollReveal as="section" className="shell section">
-        <SectionHeading
-          eyebrow="Areas of care"
-          title="Specialist Gastroenterology Care"
-          body="Providing careful assessment of common digestive concerns as well as more complex oesophageal and inflammatory conditions."
-        />
-        <div className="card-grid">
-          {homeContent.areasOfCare.map((item) => (
-            <ExpandableCard 
-               key={item.title}
-               title={item.title}
-               description={item.description}
-            />
-          ))}
-        </div>
-        <div style={{ marginTop: "2rem", textAlign: "center" }}>
-          <Link className="button button-secondary" href="/conditions">
-            View all conditions, symptoms &amp; clinical pathways &rarr;
-          </Link>
-        </div>
-      </ScrollReveal>
 
       <ScrollReveal as="section" className="shell section split-section">
         <div className="feature-card">
@@ -94,11 +73,32 @@ export default function HomePage() {
           </div>
         </div>
         <div className="pill-panel">
-          {homeContent.procedures.items.map((item) => (
-            <span className="pill" key={item}>
-              {item}
-            </span>
+          <Link className="pill text-link" href="/procedures/gastroscopy">Gastroscopy</Link>
+          <Link className="pill text-link" href="/procedures/colonoscopy">Colonoscopy</Link>
+          <Link className="pill text-link" href="/for-referrers">Open-access referrals</Link>
+        </div>
+      </ScrollReveal>
+
+      <ProfessionalRecognition />
+
+      <ScrollReveal as="section" className="shell section">
+        <SectionHeading
+          eyebrow="Areas of care"
+          title="Specialist Gastroenterology Care"
+          body="Providing careful assessment of common digestive concerns as well as more complex oesophageal and inflammatory conditions."
+        />
+        <div className="card-grid">
+          {homeContent.areasOfCare.map((item) => (
+            <article className="info-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
           ))}
+        </div>
+        <div style={{ marginTop: "2rem", textAlign: "center" }}>
+          <Link className="button button-secondary" href="/conditions">
+            View all conditions, symptoms &amp; clinical pathways &rarr;
+          </Link>
         </div>
       </ScrollReveal>
 

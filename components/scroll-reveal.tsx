@@ -19,6 +19,7 @@ export function ScrollReveal({
   const ref = useRef<Element>(null);
 
   useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

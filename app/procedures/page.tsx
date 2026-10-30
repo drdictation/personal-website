@@ -24,13 +24,14 @@ export default function ProceduresPage() {
         <SectionHeading
           eyebrow="Specialist Endoscopy"
           title="Diagnostic Endoscopy Procedures"
-          body="Procedures are performed with gentle sedation at accredited Melbourne private hospital facilities with modern endoscopy suites and comprehensive clinical monitoring."
+          body="Open-access referrals allow a procedure to be considered without a separate consultation first. Each request is clinically reviewed; consultation is recommended when needed."
         />
         <div className="editorial-grid">
           {proceduresContent.procedures.map((procedure) => (
             <article className="editorial-card" key={procedure.title}>
               <h2>{procedure.title}</h2>
               <p>{procedure.body}</p>
+              <Link className="text-link" href={procedure.href}>About {procedure.title.toLowerCase()} &rarr;</Link>
             </article>
           ))}
         </div>

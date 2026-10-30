@@ -5,12 +5,13 @@ import { BreadcrumbStructuredData } from "@/components/breadcrumb-structured-dat
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { AccordionItem } from "@/components/accordion";
+import { ProfessionalRecognition } from "@/components/professional-recognition";
 import { aboutContent, siteConfig } from "@/lib/site-content";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata(
   "About A/Prof Chamara Basnayake | Melbourne Gastroenterologist",
-  "Professional biography, academic roles at University of Melbourne, clinical leadership at St Vincent's Hospital, and credentials for A/Prof Chamara Basnayake.",
+  "A/Prof Chamara Basnayake: University of Melbourne academic, GESA Luminal Faculty member, national guideline contributor and Fellow of GESA (2026).",
   "/about",
   { exactTitle: true }
 );
@@ -29,6 +30,7 @@ export default function AboutPage() {
           ))}
         </div>
       </ScrollReveal>
+      <ProfessionalRecognition />
       <ScrollReveal as="section" className="shell section">
         <div className="faq-list">
           {aboutContent.sections.map((section, idx) => (
@@ -52,7 +54,7 @@ export default function AboutPage() {
       <ScrollReveal as="section" className="shell section split-section">
         <div className="feature-card">
           <SectionHeading
-            eyebrow="Awards and Affiliations"
+            eyebrow="Professional roles"
             title="Academic and service contributions"
           />
           <ul className="simple-list">

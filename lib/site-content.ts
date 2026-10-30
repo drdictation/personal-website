@@ -6,14 +6,11 @@ export type NavItem = {
 export const siteConfig = {
   name: "Associate Professor Chamara Basnayake",
   role: "Gastroenterologist and Endoscopist",
-  qualifications: "MBBS (Hons), FRACP, PhD",
+  qualifications: "MBBS (Hons), FRACP, PhD, FGESA",
   shortName: "Assoc Prof Chamara Basnayake",
   location: "Melbourne, Victoria",
   siteUrl:
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_PROJECT_PRODUCTION_URL
-      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : "https://www.drchamarabasnayake.com"),
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.drchamarabasnayake.com",
   description:
     "Specialist gastroenterology care in Melbourne spanning digestive symptoms, bowel cancer screening, iron deficiency, reflux, inflammatory bowel disease, coeliac disease, eosinophilic oesophagitis, and oesophageal disorders.",
   googleScholar:
@@ -27,7 +24,6 @@ export const siteConfig = {
     phone: "(03) 9650 7917",
     fax: "(03) 9650 7910",
     email: "office@focusgastro.com.au",
-    consultingStart: "13th of April 2026",
     mapsLink: "https://maps.app.goo.gl/BpizrFdGJtrZEmKF9",
     procedures: [
       "St Vincent's Private Hospital",
@@ -44,26 +40,58 @@ export const navigation: NavItem[] = [
   { href: "/procedures", label: "Procedures" },
   { href: "/for-patients", label: "For Patients" },
   { href: "/for-referrers", label: "For Referrers" },
-  { href: "/research", label: "Research, Leadership & Media" },
+  { href: "/research", label: "Research" },
   { href: "/contact", label: "Contact" }
+];
+
+export const referralPolicy = {
+  title: "Private practice and referral enquiries",
+  practice:
+    "Associate Professor Basnayake maintains a focused private practice alongside his clinical leadership, research and teaching commitments at St Vincent’s Hospital Melbourne and the University of Melbourne.",
+  capacity:
+    "Although he receives second-opinion enquiries from within Victoria, interstate and overseas, capacity for these consultations is limited.",
+  secondOpinions:
+    "Second-opinion appointments require prior discussion and agreement with the referring doctor.",
+  interstate:
+    "New referrals for patients living interstate or overseas require prior discussion."
+};
+
+export const professionalRecognition = [
+  {
+    title: "Fellow of GESA",
+    detail: "FGESA · 2026. Awarded in recognition of contributions to the Gastroenterological Society of Australia."
+  },
+  {
+    title: "Ray Clouse Award",
+    detail: "The Rome Foundation · 2021"
+  },
+  {
+    title: "TJ Martin Award",
+    detail: "Best PhD Project, St Vincent’s Hospital Melbourne · 2022"
+  },
+  {
+    title: "John Burgess Prize",
+    detail: "Best Medical Registrar, Monash Health"
+  }
 ];
 
 export const homeContent = {
   hero: {
-    eyebrow: "Academic gastroenterology with thoughtful personalised care",
-    title: "Specialist Gastroenterology Care in Melbourne",
+    eyebrow: "Academic medicine. Considered clinical care.",
+    title: "Gastroenterologist & Endoscopist in Melbourne",
     summary:
-      "An internationally recognised expert in gastroenterology, Associate Professor Chamara Basnayake provides high-quality care across both the public and private health sectors. He translates his active clinical research program into highly focused and thorough assessment for his patients.",
+      "Associate Professor Chamara Basnayake combines specialist gastroenterology and endoscopy with clinical leadership at St Vincent’s Hospital Melbourne and an academic appointment at the University of Melbourne. He contributes to national guideline development and is an invited speaker in Australia and internationally.",
     primaryAction: { href: "/about", label: "About Dr Basnayake" },
-    secondaryAction: { href: "/contact", label: "Contact" },
+    secondaryAction: { href: "/procedures", label: "Gastroscopy & colonoscopy" },
     highlights: [
-      "General gastroenterology and endoscopy",
-      "Bowel cancer screening, iron deficiency, reflux, and dysphagia",
-      "Coeliac disease, inflammatory bowel disease, eosinophilic oesophagitis, and oesophageal motility disorders"
+      "Open-access gastroscopy, colonoscopy and bowel cancer screening",
+      "General gastroenterology, inflammatory bowel disease and eosinophilic oesophagitis",
+      "Subspecialty expertise in disorders of gut–brain interaction and oesophageal physiology"
     ],
     credentials: [
-      "MBBS (Hons), FRACP, PhD",
+      siteConfig.qualifications,
       "Associate Professor, University of Melbourne",
+      "Member, GESA Luminal Faculty; Fellow of GESA (2026)",
       "Clinical lead for the Oesophageal Physiology Laboratory and Multidisciplinary Functional Gut Clinic, St Vincent's Hospital",
       "Principal Investigator for clinical trials in Eosinophilic Oesophagitis and Coeliac Disease",
       "Fellowship in oesophageal motility disorders, KU Leuven, Belgium"
@@ -102,9 +130,9 @@ export const homeContent = {
     }
   ],
   procedures: {
-    title: "Endoscopy and procedures",
+    title: "Open-access gastroscopy and colonoscopy",
     body:
-      "Gastroscopy and colonoscopy procedures are performed as part of a specialist assessment. Open-access endoscopy is available where appropriate, while more complex indications are assessed via consultation.",
+      "GPs and specialists can refer directly for gastroscopy or colonoscopy. Each request is reviewed for clinical suitability, urgency and whether a consultation is needed first. Procedures are performed at private hospitals across Melbourne.",
     items: [
       "Gastroscopy",
       "Colonoscopy",
@@ -112,19 +140,21 @@ export const homeContent = {
     ]
   },
   leadership: {
-    title: "Academic and clinical leadership",
+    title: "Contributing to gastroenterology practice and research",
     body:
-      "Alongside private consulting, Associate Professor Basnayake is an Associate Professor at the University of Melbourne and consultant gastroenterologist at St Vincent's Hospital Melbourne. He leads oesophageal physiology and multidisciplinary gastrointestinal service development while maintaining an active research and teaching program.",
+      "Alongside his clinical and university appointments, Associate Professor Basnayake contributes to national committees and guideline development in eosinophilic oesophagitis, coeliac disease and gastroparesis. His work includes GESA Luminal Faculty service, invited speaking in Australia and internationally, and supervision of PhD candidates.",
     points: [
       "Clinical lead, oesophageal physiology laboratory at St Vincent's Hospital",
       "Co-founder, multidisciplinary functional gut disorders clinic",
-      "Principal investigator for coeliac disease, eosinophilic oesophagitis, and motility trials",
-      "GESA committee, editorial, and invited speaking roles"
+      "National guideline contributions: eosinophilic oesophagitis, coeliac disease and gastroparesis",
+      "Member, GESA Luminal Faculty",
+      "Invited speaker at Australian and international meetings",
+      "PhD supervision and clinical trial leadership"
     ]
   },
   location: {
     title: "Consulting location",
-    body: `Consulting at Focus Gastroenterology from ${siteConfig.contact.consultingStart}.`
+    body: "Private consultations at Focus Gastroenterology, East Melbourne."
   }
 };
 
@@ -133,19 +163,20 @@ export const aboutContent = {
     eyebrow: "Profile",
     title: "About Associate Professor Chamara Basnayake",
     intro:
-      "Translating cutting-edge research directly into clinical practice, Associate Professor Chamara Basnayake maintains an active commitment to both the public and private health sectors."
+      "An academic gastroenterologist and endoscopist contributing to clinical care, national guidelines, research and the training of future researchers."
   },
   biography: [
-    "An internationally recognised expert in gastroenterology, Associate Professor Chamara Basnayake is committed to providing high-quality care across both the public and private health sectors, alongside an active clinical research program.",
+    "Associate Professor Chamara Basnayake is a consultant gastroenterologist at St Vincent’s Hospital Melbourne and an Associate Professor at the University of Melbourne. His work combines specialist clinical care, research, teaching and service development.",
     "He completed his medical and physician training at Monash University and Monash Health, followed by a PhD at the University of Melbourne and an advanced fellowship in oesophageal motility disorders at KU Leuven in Belgium. His PhD was awarded the TJ Martin Award for the best research project at St Vincent's Hospital Melbourne in 2022.",
     "His contributions to clinical research have been honoured globally, notably receiving the 2021 Ray Clouse Award from The Rome Foundation, the premier international society for functional gut disorders.",
-    "As Clinical Lead for the Oesophageal Physiology Laboratory and Co-founder of the Multidisciplinary Functional Gut Clinic at St Vincent's Hospital Melbourne, he brings extensive tertiary experience to his consulting practice. By maintaining a selective private practice and limiting referral volume, he ensures every patient receives a comprehensive and unhurried assessment."
+    "He contributes to national committees and guideline development for eosinophilic oesophagitis, coeliac disease and gastroparesis, and serves on the GESA Luminal Faculty. In 2026, he was awarded Fellow of GESA (FGESA) in recognition of his contributions to the Society. He is invited to speak at local, national and international meetings and supervises PhD candidates.",
+    "As Clinical Lead for the Oesophageal Physiology Laboratory and Co-founder of the Multidisciplinary Functional Gut Clinic at St Vincent’s Hospital Melbourne, he brings tertiary experience to a focused private practice in general gastroenterology and endoscopy."
   ],
   sections: [
     {
       title: "Training and qualifications",
       body:
-        "He completed his MBBS (Hons), FRACP, a University of Melbourne PhD, and advanced fellowship exposure in oesophageal motility disorders in Belgium."
+        "His qualifications include MBBS (Hons), FRACP and a University of Melbourne PhD, with advanced fellowship training in oesophageal motility disorders in Belgium. He was awarded Fellow of GESA (FGESA) in 2026."
     },
     {
       title: "Clinical expertise",
@@ -155,7 +186,12 @@ export const aboutContent = {
     {
       title: "Academic roles",
       body:
-        "Associate Professor Basnayake holds an academic appointment with the University of Melbourne, works as a consultant gastroenterologist at St Vincent's Hospital Melbourne, and serves as PhD Committee Chair in the Department of Surgery at the University of Melbourne. His academic activity is tightly linked to clinical practice, teaching, and supervision of higher-degree researchers."
+        "Associate Professor Basnayake holds an academic appointment with the University of Melbourne, works as a consultant gastroenterologist at St Vincent’s Hospital Melbourne, and serves as PhD Committee Chair in the Department of Surgery at the University of Melbourne. He supervises PhD candidates and contributes to research training and mentorship alongside his clinical and research work."
+    },
+    {
+      title: "National committees and clinical guidelines",
+      body:
+        "He serves on the GESA Luminal Faculty and contributes to national committees and guideline development for eosinophilic oesophagitis, coeliac disease and gastroparesis. This professional service sits alongside his clinical leadership and research commitments."
     },
     {
       title: "Research interests",
@@ -174,11 +210,9 @@ export const aboutContent = {
     }
   ],
   credibility: [
-    "MBBS (Hons), FRACP, PhD",
-    "John Burgess Prize for Best Medical Registrar, Monash Health",
-    "TJ Martin Award for Best PhD Project, St Vincent's Hospital Melbourne (2022)",
-    "Ray Clouse Award, Rome Foundation (2021)",
-    "GESA Luminal Committee and former Young GESA steering committee",
+    siteConfig.qualifications,
+    "Member, GESA Luminal Faculty; former Young GESA steering committee",
+    "National committee and guideline contributions in EoE, coeliac disease and gastroparesis",
     "BMC Gastroenterology editorial board member and regular peer reviewer"
   ]
 };
@@ -245,24 +279,26 @@ export const conditionsContent = {
 export const proceduresContent = {
   hero: {
     eyebrow: "Procedures",
-    title: "Endoscopy and Procedures",
+    title: "Gastroscopy & Colonoscopy in Melbourne",
     intro:
       "Associate Professor Basnayake performs diagnostic and therapeutic endoscopy at accredited private hospital facilities in Melbourne, with an emphasis on appropriate indication, patient safety, and clear communication."
   },
   procedures: [
     {
       title: "Gastroscopy (Upper GI Endoscopy)",
+      href: "/procedures/gastroscopy",
       body:
-        "Gastroscopy allows visual examination and mucosal biopsy of the oesophagus, stomach, and duodenum. It is commonly arranged to investigate persistent reflux, swallowing difficulties, suspected coeliac disease, upper abdominal pain, nausea, and iron deficiency. Procedures are performed under gentle sedation."
+        "Gastroscopy examines the oesophagus, stomach and duodenum, with biopsies where needed. It may help investigate swallowing difficulties, persistent reflux, suspected coeliac disease, upper abdominal symptoms or iron deficiency. Sedation and preparation are discussed with the treating team."
     },
     {
       title: "Colonoscopy & Polypectomy",
+      href: "/procedures/colonoscopy",
       body:
         "Colonoscopy is the primary procedure for evaluating the large bowel. Common indications include positive bowel cancer screening tests (FOBT), investigation of rectal bleeding or altered bowel habit, iron deficiency, surveillance following previous polyps, and assessment of inflammatory bowel disease. Polypectomy is performed when polyps are identified."
     }
   ],
   pathway:
-    `Direct open-access gastroscopy and colonoscopy can be arranged for straightforward indications when clinically appropriate. Procedures are performed through ${siteConfig.contact.procedures.join(", ")}, with comprehensive reports provided promptly to referring doctors.`,
+    `Open-access gastroscopy and colonoscopy referrals are reviewed for clinical suitability before a procedure is arranged. A consultation may be recommended first. Procedures are performed through ${siteConfig.contact.procedures.join(", ")}, with reports provided to referring doctors.`,
   publicPhysiologyNotice:
     "High-resolution oesophageal manometry and specialized oesophageal physiological testing are conducted through the public hospital system at the St Vincent's Hospital Melbourne Oesophageal Physiology Laboratory, where Associate Professor Basnayake serves as Clinical Lead."
 };
@@ -272,7 +308,7 @@ export const patientsContent = {
     eyebrow: "For patients",
     title: "Appointment Information",
     intro:
-      "Patients are encouraged to bring relevant information, including referrals and previous investigation results, so the consultation can focus on clinical assessment."
+      "Patients are welcome to contact Focus Gastroenterology directly with enquiries. The rooms can explain the referral process and how a consultation or procedure is arranged. All requests are reviewed for clinical suitability."
   },
   sections: [
     {
@@ -318,9 +354,9 @@ export const patientsContent = {
         `Procedures may be arranged through the most appropriate private or hospital-based pathway. Current private procedure locations include ${siteConfig.contact.procedures.join(", ")}.`
     },
     {
-      question: "Are second opinions accepted?",
+      question: "Can I contact the rooms myself?",
       answer:
-        "Second-opinion referrals are considered selectively where there is a clearly defined clinical question and relevant prior results are available."
+        "Yes. Patients can contact Focus Gastroenterology directly to ask about assessment or a procedure. The rooms will explain referral requirements and the next steps. Contacting the rooms does not confirm a procedure booking."
     }
   ]
 };
@@ -330,18 +366,18 @@ export const referrersContent = {
     eyebrow: "For referrers",
     title: "Referral Information",
     intro:
-      "The practice accepts referrals for general gastroenterology, bowel cancer screening, iron deficiency, reflux, dysphagia, inflammatory bowel disease, coeliac disease, eosinophilic oesophagitis, and oesophageal disorders."
+      "Direct referrals are welcomed for clinically appropriate gastroscopy and colonoscopy, including bowel cancer screening and polyp surveillance. Consultation referrals include general gastroenterology, inflammatory bowel disease, eosinophilic oesophagitis and initial assessment of disorders of gut–brain interaction."
   },
   sections: [
     {
       title: "Referral information",
       body:
-        "Referrals are most useful when they outline the presenting issue, relevant duration, comorbidities, current medications, and any key pathology, imaging, or endoscopy findings already available. A concise referral question helps determine whether consultation, direct procedure access, or a more focused second-opinion review is the best pathway."
+        "Please outline the clinical question, symptom duration, relevant history, current medications and any available pathology, imaging or previous endoscopy findings. Initial local referrals for disorders of gut–brain interaction are considered through clinical triage."
     },
     {
       title: "Procedure request pathways",
       body:
-        `Direct referrals for gastroscopy, colonoscopy, or combined consultation and procedure assessment are welcomed where clinically appropriate. Prompt access to open-access endoscopy is available at ${siteConfig.contact.procedures.join(", ")}, with requests reviewed for indication, urgency, and whether prior consultation is advisable before endoscopy.`
+        `Direct referrals for gastroscopy, colonoscopy, or combined consultation and procedure assessment are welcomed where clinically appropriate. Open-access endoscopy is available at ${siteConfig.contact.procedures.join(", ")}. Requests are reviewed for indication, urgency and whether consultation is advisable before endoscopy.`
     },
     {
       title: "Communication",
@@ -351,7 +387,7 @@ export const referrersContent = {
     {
       title: "Reporting and follow-up",
       body:
-        "Second-opinion referrals are accepted for specific clinical questions. Where longer-term management is required, communication is structured to support continuity with general practice."
+        "Where longer-term management is required, consultation letters and procedure reports support continuity with general practice and identify the planned follow-up."
     }
   ],
   referralChecklist: [
@@ -366,11 +402,16 @@ export const referrersContent = {
 export const researchContent = {
   hero: {
     eyebrow: "Research, leadership and media",
-    title: "Academic Research and Clinical Trials",
+    title: "Research, Guidelines & Academic Leadership",
     intro:
-      "Associate Professor Basnayake maintains an active clinical research program exploring how gastroenterology care is delivered and evaluated."
+      "Associate Professor Basnayake contributes to national guidelines, clinical research, PhD supervision and professional education, alongside his university and hospital leadership roles."
   },
   sections: [
+    {
+      title: "National committees and guidelines",
+      body:
+        "He contributes to national committees and guideline development for eosinophilic oesophagitis, coeliac disease and gastroparesis. He also serves on the Luminal Faculty of the Gastroenterological Society of Australia (GESA)."
+    },
     {
       title: "Research",
       body:
@@ -384,12 +425,12 @@ export const researchContent = {
     {
       title: "Academic roles",
       body:
-        "As an Associate Professor at the University of Melbourne, consultant gastroenterologist at St Vincent's Hospital Melbourne, and PhD Committee Chair in the Department of Surgery, he works across teaching, supervision, invited presentations, and clinically informed academic leadership."
+        "As an Associate Professor at the University of Melbourne and PhD Committee Chair in the Department of Surgery, he supervises PhD candidates and contributes to research training and mentorship. His academic work is closely connected to his clinical practice at St Vincent’s Hospital Melbourne."
     },
     {
-      title: "Invited talks",
+      title: "Invited national and international speaking",
       body:
-        "He has presented nationally and internationally on multidisciplinary gastrointestinal care, oesophageal and motility disorders, eosinophilic oesophagitis, and clinically relevant service innovation."
+        "He is invited to speak at local, national and international meetings on disorders of gut–brain interaction, multidisciplinary gastrointestinal care, oesophageal physiology, eosinophilic oesophagitis and service development."
     },
     {
       title: "Publications",
@@ -399,7 +440,7 @@ export const researchContent = {
     {
       title: "Leadership and media",
       body:
-        "Leadership roles include GESA's Luminal Committee, previous Young GESA steering committee service, editorial board work with BMC Gastroenterology, and peer review for major gastroenterology journals. Public communication has also included Better Health Channel consumer content and media commentary on gut-brain disorders. Media and collaborator enquiries are best directed through the consulting office in the first instance."
+        "Professional service includes GESA Luminal Faculty membership, previous Young GESA steering committee service, editorial board work with BMC Gastroenterology, and peer review for gastroenterology journals. In 2026, he was awarded Fellow of GESA (FGESA) in recognition of contributions to the Society. Public communication includes Better Health Channel consumer content and commentary on gut–brain disorders. Media and collaborator enquiries can be directed through the consulting office."
     }
   ]
 };
@@ -409,7 +450,7 @@ export const contactContent = {
     eyebrow: "Contact",
     title: "Consulting location and referral details",
     intro:
-      "Appointments and referral enquiries are handled through Focus Gastroenterology. The practice does not use website contact forms or online booking; direct phone, fax, and email contact is preferred."
+      "Appointments and referral enquiries are arranged directly through Focus Gastroenterology. Patients and referring doctors are welcome to contact the rooms by phone or email."
   },
   transport:
     "The East Melbourne consulting rooms are accessed easily via Victoria Parade tram routes, nearby paid parking, and major arterial roads from the eastern and northern suburbs. Patients are encouraged to allow extra time if travelling during peak periods.",

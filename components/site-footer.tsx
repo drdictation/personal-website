@@ -11,6 +11,8 @@ export function SiteFooter() {
           <p className="footer-copy">{siteConfig.role}</p>
           <p className="footer-copy">{siteConfig.qualifications}</p>
           <p className="footer-copy">{siteConfig.location}</p>
+          <p className="footer-copy">{siteConfig.contact.practice}</p>
+          <p className="footer-copy"><a className="text-link" href={`tel:${siteConfig.contact.phone.replace(/[^\d+]/g, "")}`}>{siteConfig.contact.phone}</a></p>
         </div>
         <div className="footer-links" aria-label="Footer">
           {navigation.map((item) => (

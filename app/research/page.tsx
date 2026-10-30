@@ -7,8 +7,8 @@ import { researchContent, siteConfig } from "@/lib/site-content";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata(
-  "Research, Clinical Trials & Publications | A/Prof Basnayake",
-  "Academic research at University of Melbourne, MANTRA trial in Lancet Gastroenterology, clinical trials in EoE and coeliac disease, and peer-reviewed publications.",
+  "Research, Guidelines & Leadership | A/Prof Basnayake",
+  "National guideline contributions in EoE, coeliac disease and gastroparesis, GESA Luminal Faculty service, invited speaking, PhD supervision and clinical research.",
   "/research",
   { exactTitle: true }
 );

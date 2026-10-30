@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { BreadcrumbStructuredData } from "@/components/breadcrumb-structured-data";
 import { PageHero } from "@/components/page-hero";
+import { ReferralAvailability } from "@/components/referral-availability";
 import { referrersContent, siteConfig } from "@/lib/site-content";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -30,12 +31,12 @@ export default function ForReferrersPage() {
         <div className="note-panel">
           <h2>Direct Referral Submissions</h2>
           <p style={{ marginTop: "0.5rem" }}>
-            Referrals are welcomed for outpatient consultation, direct-access endoscopy (gastroscopy and colonoscopy), and complex second-opinion assessments.
+            Referrals are welcomed for clinically appropriate open-access gastroscopy and colonoscopy, and outpatient gastroenterology consultation.
           </p>
           <div style={{ marginTop: "1rem" }}>
             <p><strong>Fax:</strong> {siteConfig.contact.fax}</p>
             <p><strong>Email:</strong> <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a></p>
-            <p><strong>Phone:</strong> {siteConfig.contact.phone}</p>
+            <p><strong>Phone:</strong> <a href={`tel:${siteConfig.contact.phone.replace(/[^\d+]/g, "")}`}>{siteConfig.contact.phone}</a></p>
           </div>
           <div style={{ marginTop: "1.5rem" }}>
             <Link className="button button-primary" href="/contact">
@@ -65,6 +66,7 @@ export default function ForReferrersPage() {
           </Link>
         </div>
       </section>
+      <ReferralAvailability />
     </>
   );
 }

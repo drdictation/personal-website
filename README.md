@@ -8,6 +8,8 @@ Premium multi-page Next.js website for a Melbourne-based gastroenterologist, des
 - About
 - Conditions
 - Procedures
+  - Gastroscopy
+  - Colonoscopy
 - For Patients
 - For Referrers
 - Research, Leadership & Media
@@ -48,21 +50,23 @@ Then open `http://127.0.0.1:3000`.
 
 ## Content editing
 
-Most practice details and all page copy live in [`lib/site-content.ts`](/Users/cbasnayake/Documents/Microsaas/personal-website/lib/site-content.ts).
+Practice details, professional copy and the agreed referral policy live in `lib/site-content.ts`. Procedure information lives in `lib/procedure-content.ts`.
 
-Update these items before production launch:
+Verify these items before production launch:
 
 - `siteConfig.siteUrl`
-- `siteConfig.contact.consultingStart`
-- `/public/images/headshot-placeholder.svg` with the final professional portrait
-- `/public/images/location-preview.svg` with a real location or map preview if desired
-- `NEXT_PUBLIC_ANALYTICS_ID` if analytics should be enabled
+- Current professional appointments, hospital locations and practice contact details
+- Referral policy wording with the rooms
+- Analytics configuration and the practice's privacy disclosures
 
 ## SEO and structured data
 
 - Page metadata is defined per route
 - `app/sitemap.ts` and `app/robots.ts` are included
-- `components/structured-data.tsx` adds physician schema markup
+- `components/structured-data.tsx` links the clinician's Person record, practice and services
+- `/llms.txt` and `/llms-full.txt` are generated from the same content used by visible pages; edit the shared content instead of maintaining separate text files
+- Fonts are downloaded at build time by `next/font` and served locally
+- The Next.js-scoped PostCSS override keeps its transitive dependency on a patched 8.x version; review this override when upgrading Next.js
 
 ## Deployment to Vercel
 

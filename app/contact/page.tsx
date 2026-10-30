@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { BreadcrumbStructuredData } from "@/components/breadcrumb-structured-data";
 import { LocationPreview } from "@/components/location-preview";
 import { PageHero } from "@/components/page-hero";
+import { ReferralAvailability } from "@/components/referral-availability";
 import { buildMetadata } from "@/lib/metadata";
 import { contactContent, siteConfig } from "@/lib/site-content";
 
@@ -22,7 +23,7 @@ export default function ContactPage() {
         <div className="feature-card">
           <h2>Practice Details</h2>
           <p>
-            Consulting at {siteConfig.contact.practice} from {siteConfig.contact.consultingStart}.
+            Private consultations at {siteConfig.contact.practice}, East Melbourne.
           </p>
           <dl className="contact-list">
             <div>
@@ -66,6 +67,7 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
+      <ReferralAvailability />
       <LocationPreview />
     </>
   );
